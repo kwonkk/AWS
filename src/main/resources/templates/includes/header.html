@@ -11,7 +11,7 @@
 
     <div class="top-header">
         <ul>
-            <li sec:authorize="isAnonymous()"><a th:href="@{/member/join}"> ddd회원가입 </a></li>
+            <li sec:authorize="isAnonymous()"><a th:href="@{/member/join}"> 회원가입 </a></li>
             <li th:if="${#authorization.expression('!hasRole(''ADMIN'') or isAnonymous()')}"><a th:href="@{/member/reservation}"> 바로예매 </a></li>
             <li th:if="${#authorization.expression('!hasRole(''ADMIN'') or isAnonymous()')}"><a href="">고객센터</a></li>
             <li th:if="${#authorization.expression('hasRole(''ADMIN'')')}"><a th:href="@{/admin/main}">관리자 페이지</a></li>
